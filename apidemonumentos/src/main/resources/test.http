@@ -1,0 +1,38 @@
+### POST Crear monumento
+POST http://localhost:8080/monument
+Content-Type: application/json
+
+{
+  "codigoPais": "ES",
+  "nombrePais": "España",
+  "nombreCiudad": "Granada",
+  "latitud": 37.1760,
+  "longitud": -3.5881,
+  "nombreMonumento": "La Alhambra",
+  "descripcion": "Complejo monumental sobre una ciudad palatina andalusí.",
+  "urlFoto": "https://ejemplo.com/alhambra.jpg"
+}
+
+### GET obtener todos los monumentos
+GET http://localhost:8080/monument
+
+### GET obtener monumento por id 1
+GET http://localhost:8080/monument/1
+
+### PUT Modificar monumento id 1
+PUT http://localhost:8080/monument/1
+Content-Type: application/json
+
+{
+  "codigoPais": "ES",
+  "nombrePais": "España",
+  "nombreCiudad": "Granada",
+  "latitud": 37.1760,
+  "longitud": -3.5881,
+  "nombreMonumento": "La Alhambra y el Generalife",
+  "descripcion": "Complejo monumental andalusí.",
+  "urlFoto": "https://ejemplo.com/alhambra-update.jpg"
+}
+
+### DELETE borrar monumento id 1
+DELETE http://localhost:8080/monument/1
